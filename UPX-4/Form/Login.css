@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Estilo do botão de Denúncia Anônima */
+.btn-denuncia {
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 20px; /* Adiciona espaçamento entre o botão de login e o de denúncia */
+    cursor: pointer;
+}
+
+.btn-denuncia:hover {
+    background-color: #333; /* Torna o botão mais escuro ao passar o mouse */
+}
+
+
+/* Estilo para a div .bene */
+.bene {
+    margin-top: 20px; /* Espaçamento superior para separar do formulário */
+    text-align: center; /* Centraliza o texto */
+}
+
+.bene p {
+    font-size: 14px;
+    color: #000000; /* Cor azul para dar destaque */
+    font-weight: bold; /* Deixa o texto em negrito */
+    margin: 0; /* Remove margens extras */
+}
+
+/* Adiciona efeito de hover para o texto */
+
+
+body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: flex;
+    width: 80%;
+    height: 70%;
+}
+
+.card-blue {
+    background-color: #007bff;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.login-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    width: 80%;
+    box-shadow: 0px 9px 6px rgba(0, 0, 0, 0.1);
+}
+
+.login-card h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #007bff;
+}
+
+.login-card label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.login-card input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 1px;
+}
+
+.login-card button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 60px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.login-card button:hover {
+    background-color: #0056b3;
+}
+
+.card-white {
+    background-color: white;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-left: 3px solid #000000;
+    text-align: center;
+    color: #333;
+}
+
+.card-white h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.card-white p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.card-white img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+/******************************/
+/* Estilo do botão de Denúncia Anônima */
+#successMessage {
+    margin-top: 20px;
+    font-size: 18px;
+    color: green;
+}
+
+.btn-denuncia {
+    width: 100%;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 20px; /* Adiciona espaçamento entre o botão de login e o de denúncia */
+    cursor: pointer;
+}
+
+.btn-denuncia:hover {
+    background-color: #333; /* Torna o botão mais escuro ao passar o mouse */
+}
+
+/* Estilo do formulário de denúncia */
+#denunciaForm form {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#denunciaForm input[type="text"],
+#denunciaForm input[type="email"],
+#denunciaForm textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#denunciaForm input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#denunciaForm input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .card-blue, .card-white {
+        flex: 1 1 100%; /* Cards ocupam 100% da largura em telas menores */
+        margin-bottom: 20px;
+    }
+    .login-card, .text-content {
+        width: 90%; /* Ajusta a largura dos componentes */
+    }
+}
+
+/****************************************************/
+
+
+/* Overlay de loading */
+#loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #000428, #004e92);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Spinner animado */
+.spinner {
+    width: 60px;
+    height: 60px;
+    border: 6px solid rgba(0, 0, 0, 0.3);
+    border-top: 6px solid #000000;
+    border-radius: 50%;
+    animation: spin 1s cubic-bezier(0.5, 0.2, 0.3, 1) infinite;
+}
+
+/* Animação do spinner */
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Fade-in effect for the overlay */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+

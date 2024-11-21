@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Login</title>
+    <link rel="stylesheet" href="/Form/Login.css">
+</head>
+<body>
+
+       <!-- Loading overlay -->
+<div id="loading" style="display: none;">
+    <div class="spinner"></div>
+</div>
+
+    <div class="container">
+        <div class="card-blue">
+            <div class="login-card">
+                <h2>Map City</h2>
+                <form id="loginForm">
+                    <label for="username">Usuário:</label>
+                    <input type="text" id="username" name="username" required>
+    
+                    <label for="email">Gmail:</label>
+                    <input type="email" id="email" name="email" required>
+    
+                    <label for="password">Senha:</label>
+                    <input type="password" id="password" name="password" required>
+    
+                    <button type="submit">Entrar</button>
+                </form>
+    
+                <div class="bene">
+                    <p>Faça login para adquirir benefícios</p>
+                </div>
+            </div>
+        </div>
+        
+    
+        <div class="card-white">
+            <div class="text-content">
+                <img src="/Form/img/logo.gif" alt="Imagem de exemplo">
+                <h3>Map City</h3>
+                <h3>Faça a diferença, denuncie!</h3>
+                <p>Sua voz é a chave para mudar a realidade. Denuncie e faça a diferença!</p>
+                <p>Anonimato garantido</p>
+    
+                <!-- Novo botão de denúncia anônima -->
+                <button class="btn-denuncia" onclick="toggleDenunciaForm()">Denúncia Anônima</button>
+    
+                <!-- Formulário de denúncia anônima (inicialmente oculto) -->
+                <div id="denunciaForm" style="display:none; margin-top: 20px;">
+                    <form action="https://api.staticforms.xyz/submit" method="post">
+                        <input type="text" name="name" placeholder="Seu Nome">
+                        <input type="text" name="email" placeholder="Seu Email">
+                        <textarea name="message" placeholder="Sua Denúncia"></textarea>
+                        <input type="text" name="honeypot" style="display:none">
+                        <input type="hidden" name="accessKey" value="ace93293-4f21-4671-807f-c195b6e09bb8">
+                        <input type="hidden" name="subject" value="Denúncia Anônima">
+                        <input type="hidden" name="replyTo" value="@">
+                        <input type="hidden" name="redirectTo" value="/index.html ">
+                        <input type="submit" value="Enviar Denúncia">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/Form/Login.js"></script>
+</body>
+</html>

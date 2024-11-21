@@ -1,0 +1,346 @@
+/* Estilos globais */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    line-height: 1.6;
+}
+
+/* Esconder elementos */
+.hidden {
+    display: none;
+}
+
+/* Header */
+
+/* Responsividade para Header */
+@media (max-width: 768px) {
+    header {
+        padding: 15px;
+    }
+}
+
+/* Formulário de Denúncia */
+#denunciaForm {
+    width: 90%;
+    max-width: 650px;
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    margin: 30px 0;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Efeito no hover do formulário */
+#denunciaForm:hover {
+    transform: translateY(-5px); /* Efeito de levitar quando o mouse passa por cima */
+}
+
+/* Estilos para inputs, textarea e buttons dentro do formulário */
+#denunciaForm input, #denunciaForm textarea, #denunciaForm button {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+/* Foco nos campos de input e textarea */
+#denunciaForm input:focus, #denunciaForm textarea:focus {
+    border-color: #4a90e2;
+    outline: none;
+}
+
+/* Estilo para botão do formulário */
+#denunciaForm button {
+    background-color: #4a90e2;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    padding: 14px;
+}
+
+/* Efeito hover no botão */
+#denunciaForm button:hover {
+    background-color: #007acc;
+    transform: translateY(-2px);
+}
+
+/* Botões principais */
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+/* Estilo dos botões */
+.buttons-container button {
+    background-color: #4a90e2;
+    color: white;
+    padding: 12px 30px;
+    margin: 5px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Efeito hover nos botões */
+.buttons-container button:hover {
+    background-color: #007acc;
+    transform: translateY(-2px);
+}
+
+/* Efeito de pressionar o botão */
+.buttons-container button:active {
+    transform: translateY(2px);
+}
+
+/* Seção de Denúncias */
+#denuncias {
+    width: 90%;
+    max-width: 650px;
+    margin-top: 40px;
+}
+
+/* Card de Denúncia */
+.card-denuncia {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+/* Efeito hover nos cards */
+.card-denuncia:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilo do texto no card */
+.card-denuncia p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+/* Melhorias de acessibilidade */
+a {
+    color: #4a90e2;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #007acc;
+}
+
+/* Responsividade: ajustes para telas menores */
+@media (max-width: 768px) {
+    /* Formulário de Denúncia */
+    #denunciaForm {
+        padding: 20px;
+    }
+
+    /* Ajuste para os botões principais */
+    .buttons-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    /* Cards de Denúncia */
+    .card-denuncia {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+
+    /* Header */
+    header {
+        padding: 15px;
+    }
+}
+
+/* Responsividade para dispositivos muito pequenos (como celulares) */
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    /* Formulário de Denúncia */
+    #denunciaForm {
+        width: 100%;
+        padding: 15px;
+    }
+
+    /* Card de Denúncia */
+    .card-denuncia {
+        padding: 10px;
+    }
+
+    /* Ajuste dos botões */
+    .buttons-container button {
+        padding: 10px 25px;
+    }
+
+    /* Texto no card */
+    .card-denuncia p {
+        font-size: 14px;
+    }
+}
+
+
+
+/*****************************************************/
+
+
+
+/* Header do perfil */
+.profile-header {
+    background: #0077b6;
+    color: white;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px; /* Borda arredondada */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+/* Container da área do perfil */
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Estilo do avatar */
+.avatar {
+    background: #023e8a;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra leve no avatar */
+    transition: background 0.3s ease-in-out; /* Animação suave no hover */
+}
+
+/* Estilo quando o avatar for hover */
+.avatar:hover {
+    background: #00b4d8; /* Cor suave de hover */
+}
+
+/* Container das informações */
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+}
+
+/* Título do nome */
+.info h2 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    text-align: center; /* Centraliza o texto */
+}
+
+/* Parágrafo do email */
+.info p {
+    margin: 0;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8); /* Cor mais suave para o email */
+    text-align: center;
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 600px) {
+    .profile-header {
+        padding: 15px;
+    }
+
+    .profile {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .avatar {
+        width: 50px;
+        height: 50px;
+    }
+
+    .info h2 {
+        font-size: 18px;
+    }
+
+    .info p {
+        font-size: 12px;
+    }
+}
+/*****************************************/
+/* Estilo do modal */
+.modal {
+    display: none; /* Inicialmente oculto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Fundo semitransparente */
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Coloca o modal acima de outros elementos */
+}
+
+/* Conteúdo do modal */
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+}
+
+.modal-content p {
+    margin: 20px 0;
+    font-size: 18px;
+}
+
+.modal-content button {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    background-color: #0077b6;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.modal-content button:hover {
+    background-color: #005f8d;
+}
